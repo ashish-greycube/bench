@@ -59,7 +59,7 @@ Note: Please do not remove the bench directory the above commands will create
 
 	The get-app command gets remote frappe apps from a remote git repository and installs them. Example: [erpnext](https://github.com/frappe/erpnext)
 
-		bench get-app erpnext https://github.com/frappe/erpnext
+		bench get-app erpnext https://github.com/frappe/erpnext --branch develop
 
 * Install apps
 
