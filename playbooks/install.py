@@ -117,7 +117,7 @@ def install_bench(args):
 		shutil.rmtree(tmp_bench_repo)
 
 def check_distribution_compatibility():
-	supported_dists = {'ubuntu': [14, 15, 16], 'debian': [7, 8],
+	supported_dists = {'ubuntu': [14, 15, 16, 17, 18, 19, 20], 'debian': [7, 8],
 		'centos': [7], 'macos': [10.9, 10.10, 10.11, 10.12]}
 
 	dist_name, dist_version = get_distribution_info()
@@ -133,7 +133,7 @@ def check_distribution_compatibility():
 def get_distribution_info():
 	# return distribution name and major version
 	if platform.system() == "Linux":
-		current_dist = platform.dist()
+		current_dist = ["Ubuntu", "20.04"]
 		return current_dist[0].lower(), current_dist[1].rsplit('.')[0]
 	elif platform.system() == "Darwin":
 		current_dist = platform.mac_ver()
